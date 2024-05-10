@@ -72,10 +72,10 @@ public class App {
                         }
                     }
                     break;
-                    case "5":
+                case "5":
                     System.out.println("Ingrese la inicial para ver palabras:");
                     String letra = scanner.nextLine();
-                    if (letra.isEmpty() || letra.matches(".*\\d.*"))  {
+                    if (letra.isEmpty() || letra.matches(".*\\d.*")) {
                         System.out.println("Debe ingresar al menos una letra como inicial.");
                         break;
                     }
@@ -92,9 +92,15 @@ public class App {
                         }
                     }
                     break;
-                default:
+
+                case "6":
+                    System.out.println("¡Hasta luego!");
+                    seguir = false;
                     break;
+                default:
+                    System.out.println("opcion invalida, ingrese una opcion valida para poder continuar");
             }
         }
+        scanner.close();
     }
 }
