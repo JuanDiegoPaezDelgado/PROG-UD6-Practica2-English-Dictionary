@@ -35,3 +35,5 @@ la clase App es donde se ejecutara nuestro codigo, en ella tendremos un bucle wh
 el caso 3 nos permitira verificar que una palabra existe en nuestro diccionario y tambien verificara que la entrada no sea un numero, el caso 4 nos mostrara las iniciales disponibles.
 ![App](./imgs/app3.png)
 el caso 5 nos permitira ingresar una inicial para ver que valores tiene esta, tambien verifica que la entrada no sea un valor numerico, el caso 6 cerrara el programa y por ultimo en caso que ingresemos un valor distinto nos mostrara un mensaje por pantalla para ingresar un valor valido
+
+[volver](../README.md)
