@@ -72,6 +72,26 @@ public class App {
                         }
                     }
                     break;
+                    case "5":
+                    System.out.println("Ingrese la inicial para ver palabras:");
+                    String letra = scanner.nextLine();
+                    if (letra.isEmpty() || letra.matches(".*\\d.*"))  {
+                        System.out.println("Debe ingresar al menos una letra como inicial.");
+                        break;
+                    }
+                    char inicial = letra.charAt(0);
+                    Set<String> palabras = diccionario.conseguirPalabrasPorInicial(inicial);
+                    System.out.println("\nPalabras que comienzan con '" + Character.toUpperCase(inicial) + "':\n");
+                    if (palabras == null) {
+                        System.out.println(
+                                "No se encontraron palabras para la inicial " + Character.toUpperCase(inicial));
+                    } else {
+                        for (String palabra : palabras) {
+                            String palabraMayuscula = Character.toUpperCase(palabra.charAt(0)) + palabra.substring(1);
+                            System.out.println("- " + palabraMayuscula);
+                        }
+                    }
+                    break;
                 default:
                     break;
             }
