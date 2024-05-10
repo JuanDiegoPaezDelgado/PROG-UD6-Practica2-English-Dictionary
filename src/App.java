@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Set;
 
 import net.salesianos.diccionario.Diccionario;
 import net.salesianos.menu.Menu;
@@ -54,6 +55,22 @@ public class App {
                         }
                     }
 
+                    break;
+                case "4":
+                    System.out.println("Iniciales disponibles:");
+                    Set<Character> iniciales = diccionario.conseguirInicialesDisponibles();
+                    if (iniciales.isEmpty()) {
+                        System.out.println("\nNo hay iniciales disponibles en el diccionario.");
+                    } else {
+                        boolean primero = true;
+                        for (char inicial : iniciales) {
+                            if (!primero) {
+                                System.out.print(", ");
+                            }
+                            primero = false;
+                            System.out.print("\"" + Character.toString(inicial).toUpperCase() + "\"");
+                        }
+                    }
                     break;
                 default:
                     break;
