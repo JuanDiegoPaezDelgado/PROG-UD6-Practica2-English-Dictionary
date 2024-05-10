@@ -18,4 +18,10 @@ public class Diccionario {
         diccionario.putIfAbsent(inicial, new HashSet<>());
         diccionario.get(inicial).add(palabra);
     }
+    public void eliminarPalabra(String palabra) {
+        char inicial = Character.toLowerCase(palabra.charAt(0));
+        palabra = palabra.trim().toLowerCase();
+        diccionario.get(inicial).remove(palabra);
+
+    }
 }
