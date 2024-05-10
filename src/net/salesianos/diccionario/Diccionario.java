@@ -24,4 +24,11 @@ public class Diccionario {
         diccionario.get(inicial).remove(palabra);
 
     }
+    
+    public boolean contienePalabra(String palabra) {
+        char inicial = Character.toLowerCase(palabra.charAt(0));
+        palabra = palabra.trim().toLowerCase();
+        return diccionario.get(inicial) != null && diccionario.get(inicial).contains(palabra);
+    }
+
 }
