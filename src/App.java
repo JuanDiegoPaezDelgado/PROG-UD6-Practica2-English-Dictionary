@@ -24,7 +24,7 @@ public class App {
                     diccionario.agregarPalabra(agregarPalabra);
                     System.out.println("\nPalabra agregada correctamente.");
                     break;
-                    case "2":
+                case "2":
                     System.out.println("Ingrese la palabra a eliminar:");
                     String palabraEliminar = scanner.nextLine();
                     if (palabraEliminar.isEmpty() || palabraEliminar.matches(".*\\d.*")) {
@@ -37,6 +37,21 @@ public class App {
                         System.out.println("\nPalabra eliminada correctamente.");
                     } else {
                         System.out.println("\nPalabra no encontrada");
+                    }
+
+                    break;
+                case "3":
+                    System.out.println("Ingrese la palabra que desea verificar:");
+                    String palabraAVerificar = scanner.nextLine();
+                    if (palabraAVerificar.isEmpty() || palabraAVerificar.matches(".*\\d.*")) {
+                        System.out.println("Debe ingresar al menos un valor.");
+                        break;
+                    } else if (seguir) {
+                        if (diccionario.contienePalabra(palabraAVerificar)) {
+                            System.out.println("\nLa palabra está en el diccionario.");
+                        } else {
+                            System.out.println("\nLa palabra no está en el diccionario.");
+                        }
                     }
 
                     break;
