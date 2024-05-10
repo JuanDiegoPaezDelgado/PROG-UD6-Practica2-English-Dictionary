@@ -24,6 +24,22 @@ public class App {
                     diccionario.agregarPalabra(agregarPalabra);
                     System.out.println("\nPalabra agregada correctamente.");
                     break;
+                    case "2":
+                    System.out.println("Ingrese la palabra a eliminar:");
+                    String palabraEliminar = scanner.nextLine();
+                    if (palabraEliminar.isEmpty() || palabraEliminar.matches(".*\\d.*")) {
+                        System.out.println("Debe ingresar un texto.");
+                        break;
+                    }
+
+                    if (diccionario.contienePalabra(palabraEliminar)) {
+                        diccionario.eliminarPalabra(palabraEliminar);
+                        System.out.println("\nPalabra eliminada correctamente.");
+                    } else {
+                        System.out.println("\nPalabra no encontrada");
+                    }
+
+                    break;
                 default:
                     break;
             }
